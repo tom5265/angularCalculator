@@ -1,5 +1,5 @@
 <!doctype html>
-<html x-ng-app="MyApp">
+<html x-ng-app="MyApp" ng-controller="MainController">
 
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
@@ -28,10 +28,10 @@
            Add Numbers: <input type="number" placeholder="Operand 1" ng-model="operandOne">
            <input type="number" placeholder="Operand 2" ng-model="operandTwo">
            <button type="button" ng-click="adding()">+</button>
-           <button type="button">-</button>
-           <button type="button">*</button>
-           <button type="button">/</button>
-           <p class="feedback">{{sum}}</p>
+           <button type="button" ng-click="subtracting()">-</button>
+           <button type="button" ng-click="multiplying()">*</button>
+           <button type="button" ng-click="dividing()">/</button>
+           <p class="feedback">{{result}}</p>
         </div>
 </body>
 
