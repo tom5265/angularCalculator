@@ -1,8 +1,18 @@
 var controllers = angular.module('MyApp.controller', []);
 
 controllers.controller('MainController', ['$scope', function ($scope) {
+    
+    function inputIsInvalid() {
+        // return $scope.operandOne != null && $scope.operandTwo != null;
+        if ($scope.operandOne == undefined || $scope.operandTwo == undefined) {
+            return true;
+        } else {
+            return false;
+        }
+    }
+    
     $scope.adding = function () {
-       if ($scope.operandOne == null || $scope.operandTwo == null) {
+       if (inputIsInvalid()) {
             alert('Both operands are required!');
             return
         }
@@ -12,7 +22,7 @@ controllers.controller('MainController', ['$scope', function ($scope) {
         $scope.clearForms(); 
     }
     $scope.subtracting = function () {
-        if ($scope.operandOne == null || $scope.operandTwo == null) {
+        if (inputIsInvalid()) {
             alert('Both operands are required!');
             return
         }
@@ -22,7 +32,7 @@ controllers.controller('MainController', ['$scope', function ($scope) {
         $scope.clearForms();
     }
     $scope.multiplying = function () {
-        if ($scope.operandOne == null || $scope.operandTwo == null) {
+         if (inputIsInvalid()) {
             alert('Both operands are required!');
             return
         }
@@ -32,7 +42,7 @@ controllers.controller('MainController', ['$scope', function ($scope) {
         $scope.clearForms();
     }
     $scope.dividing = function () {
-        if ($scope.operandOne == null || $scope.operandTwo == null) {
+         if (inputIsInvalid()) {
             alert('Both operands are required!');
             return
         }
