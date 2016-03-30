@@ -51,12 +51,12 @@ controllers.controller('MainController', ['$scope', function ($scope) {
         $scope.operandTwo = 0;
     }
     
-    $scope.errorCatch = function () {
-        if ($scope.operandOne == null || $scope.operandTwo == null) {
-            alert('Both operands are required!');
-            return
-        }
-    }
+    // $scope.errorCatch = function () {
+    //     if ($scope.operandOne == null || $scope.operandTwo == null) {
+    //         alert('Both operands are required!');
+    //         return
+    //     }
+    // }
     
 }])
 
